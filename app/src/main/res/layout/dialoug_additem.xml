@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/app_blue"
+        android:id="@+id/rel1">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+
+            app:srcCompat="@drawable/cancleicon"
+            android:id="@+id/canclebtn"/>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:textColor="@color/white"
+    android:textColorHint="@color/white"
+    android:hint="Item name"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_below="@id/canclebtn"
+    android:id="@+id/iname"/>
+
+        <EditText
+            android:id="@+id/iprise"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/iname"
+            android:layout_marginLeft="30dp"
+
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:hint="Price"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/md_grey_300"
+        android:id="@+id/rel2"
+        android:layout_below="@+id/rel1">
+
+        <Button android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text=" Add Item "
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:id="@+id/btn"
+            android:background="@drawable/butnclick"
+            android:textColor="@color/white">
+
+        </Button>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

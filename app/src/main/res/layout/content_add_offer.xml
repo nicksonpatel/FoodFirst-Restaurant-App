@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.friendlyitsolution.meet.rest_app.add_offer"
+    tools:showIn="@layout/activity_add_offer">
+
+
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="Plan Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etdiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etname"
+        android:layout_below="@+id/etname"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:hint="Discount %"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etdiscount"
+        android:layout_below="@+id/etdiscount"
+        android:layout_marginEnd="141dp"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:hint="Start Price"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etpricee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etdiscount"
+        android:layout_alignTop="@+id/etprice"
+        android:layout_marginStart="110dp"
+        android:ems="10"
+        android:hint="End Price"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etdes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etdiscount"
+        android:layout_below="@+id/etprice"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etdes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:text="Add Plan" />
+</RelativeLayout>

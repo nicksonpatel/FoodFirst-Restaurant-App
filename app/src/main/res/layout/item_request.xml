@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="#7ff8f8f8"
+    android:padding="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:id="@+id/img"
+        android:src="@drawable/pending"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:text="Pending"
+        android:id="@+id/status"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/title"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        android:textColor="@color/app_blue"
+        android:text="Resturent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img"
+
+        android:layout_marginLeft="20dp"
+        android:id="@+id/time"
+        android:textSize="14dp"
+        android:layout_below="@+id/title"
+        android:text="20 dec 2017"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/person"
+        android:textSize="12dp"
+        android:layout_below="@+id/time"
+        android:text="2 person"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/code"
+        android:layout_centerVertical="true"
+        android:textSize="25dp"
+        android:text="2345"/>
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status">
+
+        <Button
+            android:id="@+id/no"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/butnclick_off"
+            android:text="Cancel"
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/no"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/butnclick_on"
+            android:textColor="@color/white"
+            android:text="Accept"
+            android:id="@+id/yes"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

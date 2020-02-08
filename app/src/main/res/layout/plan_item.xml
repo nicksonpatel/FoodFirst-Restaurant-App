@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:focusable="true"
+     android:clickable="true"
+    android:background="@color/md_white_off"
+     android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+
+
+        <ImageView
+
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/plan_icon"
+            android:padding="10dp"
+            android:id="@+id/img"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Standard plan"
+            android:textSize="18dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:id="@+id/name"
+            android:textColor="@color/app_blue"
+            android:layout_toRightOf="@+id/img"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="upto 20 car capacity"
+            android:textSize="14dp"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:id="@+id/number"
+            android:layout_toRightOf="@+id/img"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plan description"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/img"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/price"
+            android:textSize="12dp"
+            android:layout_below="@+id/number"
+            android:textStyle="bold"
+            android:id="@+id/address"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000 \u20B9 /-"
+            android:background="@drawable/rightbutton"
+            android:padding="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:id="@+id/price"/>
+
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2000 \u20B9 /-"
+            android:background="@drawable/rightbutton"
+            android:padding="10dp"
+            android:textSize="14dp"
+            android:layout_below="@+id/price"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:id="@+id/eprice"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="to"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@color/md_grey_600"
+            android:layout_marginTop="35dp"
+            android:id="@+id/tolab"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eprice"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:text="Delete"
+            android:id="@+id/btn"/>
+
+</RelativeLayout>

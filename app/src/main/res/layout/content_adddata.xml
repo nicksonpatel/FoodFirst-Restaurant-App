@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.friendlyitsolution.meet.rest_app.adddata"
+    tools:showIn="@layout/activity_adddata">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="5dp"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                app:srcCompat="@drawable/icon_image" />
+
+            <LinearLayout
+                android:layout_below="@+id/iv"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/border_orange6"
+                android:elevation="3dp"
+                android:id="@+id/iv1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ims12"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/call" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter Contact Number"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:textCursorDrawable="@drawable/rounded_down_corners_bg"
+                    android:textSize="15dp"
+                    app:met_baseColor="@android:color/black"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelAnimating="true"
+                    app:paddingStart="10dp"
+                    app:met_textColorHint="@color/black"
+                    app:met_primaryColor="?colorAccent" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_below="@+id/iv1"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/border_orange6"
+                android:elevation="3dp"
+                android:id="@+id/lin7"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ims1"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/rups" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Restaurant Name"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:inputType="text"
+                    android:textCursorDrawable="@drawable/rounded_down_corners_bg"
+                    android:textSize="15dp"
+                    app:met_baseColor="@android:color/black"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelAnimating="true"
+                    app:paddingStart="10dp"
+                    app:met_textColorHint="@color/black"
+                    app:met_primaryColor="?colorAccent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/lin7"
+                android:background="@drawable/border_orange6"
+                android:elevation="3dp"
+                android:id="@+id/lin6"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/im2f"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+
+                    app:srcCompat="@drawable/icon_location" />
+
+                <Spinner
+                    android:id="@+id/area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="Area"
+                    android:paddingLeft="10dp"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+
+                android:layout_below="@+id/lin6"
+                android:background="@drawable/border_orange6"
+                android:elevation="3dp"
+                android:id="@+id/lin3"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/im2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+
+                    app:srcCompat="@drawable/icon_location" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter Address"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:inputType="textMultiLine"
+                    android:textCursorDrawable="@drawable/rounded_down_corners_bg"
+                    android:textSize="15dp"
+                    android:minLines="4"
+                    app:met_baseColor="@android:color/black"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelAnimating="true"
+                    app:paddingStart="10dp"
+                    app:met_textColorHint="@color/black"
+                    app:met_primaryColor="?colorAccent" />
+            </LinearLayout>
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin3"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/radioGroup">
+
+                <RadioButton
+                    android:checked="true"
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="15dp"
+                    android:textColor="@color/app_blue"
+                    android:text="Vegetarian" />
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="15dp"
+                    android:textColor="@color/app_blue"
+                    android:text="Non-vegetarian" />
+            </RadioGroup>
+
+
+            <CheckBox
+                android:id="@+id/ch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv"
+                android:layout_alignTop="@+id/iv"
+                android:layout_marginTop="8dp"
+                android:text="north indian" />
+
+            <CheckBox
+                android:id="@+id/ch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignStart="@+id/ch1"
+                android:layout_below="@+id/ch1"
+                android:text="south indian" />
+
+            <CheckBox
+                android:id="@+id/ch3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ch2"
+                android:layout_toRightOf="@+id/iv"
+                android:text="chinese" />
+            <CheckBox
+                android:id="@+id/ch4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ch3"
+                android:layout_toRightOf="@+id/iv"
+                android:text="Fast-Food" />
+            <LinearLayout
+                android:layout_below="@+id/Price"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/border_orange6"
+                android:elevation="3dp"
+                android:id="@+id/lin5"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ims"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/rups" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter Amount \u20B9 / 2 Person"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:textCursorDrawable="@drawable/rounded_down_corners_bg"
+                    android:textSize="15dp"
+                    app:met_baseColor="@android:color/black"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelAnimating="true"
+                    app:paddingStart="10dp"
+                    app:met_textColorHint="@color/black"
+                    app:met_primaryColor="?colorAccent" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="Add"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:id="@+id/btn"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back_appblue_corder"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/lin5"/>
+
+            <TextView
+                android:id="@+id/Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/radioGroup"
+                android:layout_below="@+id/radioGroup"
+                android:layout_marginTop="12dp"
+                android:textSize="18dp"
+                android:layout_marginLeft="5dp"
+                android:text="Capacity  " />
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/cap"
+                android:layout_toRightOf="@+id/Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup"
+                android:layout_marginTop="12dp"
+                android:textSize="18dp"
+                android:text="Capacity  " />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
