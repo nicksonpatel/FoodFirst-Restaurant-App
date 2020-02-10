@@ -1,15 +1,20 @@
 package com.friendlyitsolution.meet.rest_app;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -82,24 +87,26 @@ public class adddata extends AppCompatActivity {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TedBottomPicker tedBottomPicker = new TedBottomPicker.Builder(adddata.this)
-                        .setOnImageSelectedListener(new TedBottomPicker.OnImageSelectedListener() {
-                            @Override
-                            public void onImageSelected(Uri uri) {
+                if (isStoragePermissionGranted()) {
+                    TedBottomPicker tedBottomPicker = new TedBottomPicker.Builder(adddata.this)
+                            .setOnImageSelectedListener(new TedBottomPicker.OnImageSelectedListener() {
+                                @Override
+                                public void onImageSelected(Uri uri) {
 
-                                // Toast.makeText(getApplicationContext(),"get : "+uri,Toast.LENGTH_LONG).show();
-                                if(uri!=null)
-                                {
-                                    imgurl=uri;
-                                    iv.setImageURI(uri);
+                                    // Toast.makeText(getApplicationContext(),"get : "+uri,Toast.LENGTH_LONG).show();
+                                    if (uri != null) {
+                                        setImage(uri);
+                                    }
                                 }
-                            }
-                        })
-                        .create();
+                            })
+                            .create();
 
-                tedBottomPicker.show(getSupportFragmentManager());
+                    tedBottomPicker.show(getSupportFragmentManager());
+                }
             }
         });
+
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,6 +125,39 @@ public class adddata extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void setImage(Uri uri) {
+        imgurl=uri;
+        iv.setImageURI(uri);
+    }
+
+    public  boolean isStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                Log.v("PERMISSIONS","Permission is granted");
+                return true;
+            } else {
+
+                Log.v("PERMISSIONS","Permission is revoked");
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                return false;
+            }
+        }
+        else { //permission is automatically granted on sdk<23 upon installation
+            Log.v("PERMISSIONS","Permission is granted");
+            return true;
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+            Log.v("PERMISSIONS","Permission: "+permissions[0]+ "was "+grantResults[0]);
+            iv.callOnClick();
+        }
     }
 
     void setCapactity()
