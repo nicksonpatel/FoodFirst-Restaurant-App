@@ -37,5 +37,13 @@ Add username and password that you just added in database. click on sign in.
 If you want to test you can directy download and install apk in your device from above link:
 
 https://drive.google.com/open?id=1ggdRQe7V4exZ1sTpB8bWs3zVcRnCAJOP
+
+after installation you can login with this credentials.
+
+Default user name :  nick
+         password :  123
+         
+second account : username : pizzahut
+                 password : 123
                
                
